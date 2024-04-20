@@ -17,7 +17,6 @@
 <link rel="modulepreload" href="./_observablehq/stdlib/sqlite.js">
 <link rel="modulepreload" href="./_observablehq/stdlib/duckdb.js">
 <link rel="modulepreload" href="./_npm/leaflet@1.9.4/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
 <link rel="modulepreload" href="./_npm/apache-arrow@15.0.2/_esm.js">
 <link rel="modulepreload" href="./_npm/parquet-wasm@0.5.0/esm/arrow1.js">
 <link rel="modulepreload" href="./_npm/arquero@5.4.0/_esm.js">
@@ -39,6 +38,7 @@
 <link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/_esm.js">
 <link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/_esm.js">
 <link rel="modulepreload" href="./_npm/d3-drag@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
 <link rel="modulepreload" href="./_npm/d3-ease@3.0.1/_esm.js">
 <link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/_esm.js">
 <link rel="modulepreload" href="./_npm/d3-force@3.0.0/_esm.js">
@@ -75,10 +75,10 @@ registerFile("./data/SA_23.parquet", {"name":"./data/SA_23.parquet","path":"./_f
 registerFile("./data/SA_24.parquet", {"name":"./data/SA_24.parquet","path":"./_file/data/SA_24.44c221e6.parquet","lastModified":1713241561525});
 registerFile("./data/SB_24.parquet", {"name":"./data/SB_24.parquet","path":"./_file/data/SB_24.f3656357.parquet","lastModified":1713241561537});
 registerFile("./data/header_24.parquet", {"name":"./data/header_24.parquet","path":"./_file/data/header_24.31dc3980.parquet","lastModified":1713241561488});
-registerFile("./data/test.csv", {"name":"./data/test.csv","mimeType":"text/csv","path":"./_file/data/test.4275ed4a.csv","lastModified":1713589294063});
+registerFile("./data/test.parquet", {"name":"./data/test.parquet","path":"./_file/data/test.25a1f11f.parquet","lastModified":1713589869512});
 registerFile("./test_db.db", {"name":"./test_db.db","path":"./_file/test_db.763836b4.db","lastModified":1712894450511});
 
-define({id: "102b6bdf", inputs: ["FileAttachment"], outputs: ["SQLiteDatabaseClient","DuckDBClient","L","fec","db"], body: async (FileAttachment) => {
+define({id: "71e2a996", inputs: ["FileAttachment"], outputs: ["SQLiteDatabaseClient","DuckDBClient","L","fec","db"], body: async (FileAttachment) => {
 const [{SQLiteDatabaseClient}, {DuckDBClient}, L] = await Promise.all([import("./_observablehq/stdlib/sqlite.js"), import("./_observablehq/stdlib/duckdb.js"), import("./_npm/leaflet@1.9.4/_esm.js")]);
 const fec = FileAttachment("./test_db.db").sqlite();
 const db = await DuckDBClient.of({
@@ -88,7 +88,7 @@ const db = await DuckDBClient.of({
 	SB: FileAttachment("./data/SB_24.parquet"),
 	F3N24: FileAttachment("./data/F3N_24.parquet"),
 	F3N23: FileAttachment("./data/F3N_23.parquet"),
-	candidates: FileAttachment("./data/test.csv")
+	candidates: FileAttachment("./data/test.parquet")
 });
 return {SQLiteDatabaseClient,DuckDBClient,L,fec,db};
 }});
@@ -453,7 +453,7 @@ return {colorfn};
 }
 
 </style>
-<div id="cell-102b6bdf" class="observablehq observablehq--block"></div>
+<div id="cell-71e2a996" class="observablehq observablehq--block"></div>
 <div id="cell-01ba4719" class="observablehq observablehq--block"></div>
 <div id="cell-6e3136d3" class="observablehq observablehq--block"></div>
 <div id="cell-ff4d7581" class="observablehq observablehq--block"></div>

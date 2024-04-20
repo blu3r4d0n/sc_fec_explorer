@@ -75,10 +75,10 @@ registerFile("./data/SA_23.parquet", {"name":"./data/SA_23.parquet","path":"./_f
 registerFile("./data/SA_24.parquet", {"name":"./data/SA_24.parquet","path":"./_file/data/SA_24.44c221e6.parquet","lastModified":1713241561525});
 registerFile("./data/SB_24.parquet", {"name":"./data/SB_24.parquet","path":"./_file/data/SB_24.f3656357.parquet","lastModified":1713241561537});
 registerFile("./data/header_24.parquet", {"name":"./data/header_24.parquet","path":"./_file/data/header_24.31dc3980.parquet","lastModified":1713241561488});
-registerFile("./test.csv", {"name":"./test.csv","mimeType":"text/csv","path":"./_file/test.4275ed4a.csv","lastModified":1713149816953});
+registerFile("./data/test.csv", {"name":"./data/test.csv","mimeType":"text/csv","path":"./_file/data/test.4275ed4a.csv","lastModified":1713589294063});
 registerFile("./test_db.db", {"name":"./test_db.db","path":"./_file/test_db.763836b4.db","lastModified":1712894450511});
 
-define({id: "a8595d25", inputs: ["FileAttachment"], outputs: ["SQLiteDatabaseClient","DuckDBClient","L","fec","db"], body: async (FileAttachment) => {
+define({id: "102b6bdf", inputs: ["FileAttachment"], outputs: ["SQLiteDatabaseClient","DuckDBClient","L","fec","db"], body: async (FileAttachment) => {
 const [{SQLiteDatabaseClient}, {DuckDBClient}, L] = await Promise.all([import("./_observablehq/stdlib/sqlite.js"), import("./_observablehq/stdlib/duckdb.js"), import("./_npm/leaflet@1.9.4/_esm.js")]);
 const fec = FileAttachment("./test_db.db").sqlite();
 const db = await DuckDBClient.of({
@@ -88,7 +88,7 @@ const db = await DuckDBClient.of({
 	SB: FileAttachment("./data/SB_24.parquet"),
 	F3N24: FileAttachment("./data/F3N_24.parquet"),
 	F3N23: FileAttachment("./data/F3N_23.parquet"),
-	candidates: FileAttachment("./test.csv")
+	candidates: FileAttachment("./data/test.csv")
 });
 return {SQLiteDatabaseClient,DuckDBClient,L,fec,db};
 }});
@@ -393,7 +393,7 @@ return {colorfn};
     <li class="observablehq-link"><a href="./test">Untitled</a></li>
   </ol>
 </nav>
-<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),t=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?t.checked=r==="true":t.indeterminate=!0;for(const o of document.querySelectorAll("#observablehq-sidebar summary")){const s=o.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${o.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
 <style>
@@ -453,7 +453,7 @@ return {colorfn};
 }
 
 </style>
-<div id="cell-a8595d25" class="observablehq observablehq--block"></div>
+<div id="cell-102b6bdf" class="observablehq observablehq--block"></div>
 <div id="cell-01ba4719" class="observablehq observablehq--block"></div>
 <div id="cell-6e3136d3" class="observablehq observablehq--block"></div>
 <div id="cell-ff4d7581" class="observablehq observablehq--block"></div>
@@ -485,8 +485,4 @@ return {colorfn};
 <div id="cell-9db9faf9" class="observablehq observablehq--block"></div>
 
 </main>
-<footer id="observablehq-footer">
-<nav><a rel="next" href="./test"><span>Untitled</span></a></nav>
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-04-19T23:11:46">Apr 19, 2024</a>.</div>
-</footer>
 </div>

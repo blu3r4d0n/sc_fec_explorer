@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Contributions summary for House Races | FEC Browser</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/sqlite.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@15.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.5.0/esm/arrow1.js">
+<link rel="modulepreload" href="./_npm/arquero@5.4.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/_esm.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.14/_esm.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.28.0/_esm.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/_esm.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/_esm.js">
+<link rel="modulepreload" href="./_npm/tslib@2.6.2/_esm.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@23.5.26/_esm.js">
+<link rel="modulepreload" href="./_npm/acorn@8.11.3/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/_esm.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/_esm.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/_esm.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/_esm.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/_esm.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+import {registerFile} from "./_observablehq/stdlib.js";
+
+registerFile("./data/F3N_23.parquet", {"name":"./data/F3N_23.parquet","path":"./_file/data/F3N_23.36535c8b.parquet","lastModified":1713266433256});
+registerFile("./data/F3N_24.parquet", {"name":"./data/F3N_24.parquet","path":"./_file/data/F3N_24.b6b6dafe.parquet","lastModified":1713241561498});
+registerFile("./data/SA_23.parquet", {"name":"./data/SA_23.parquet","path":"./_file/data/SA_23.8aa0874d.parquet","lastModified":1713266364101});
+registerFile("./data/SA_24.parquet", {"name":"./data/SA_24.parquet","path":"./_file/data/SA_24.44c221e6.parquet","lastModified":1713241561525});
+registerFile("./data/SB_24.parquet", {"name":"./data/SB_24.parquet","path":"./_file/data/SB_24.f3656357.parquet","lastModified":1713241561537});
+registerFile("./data/header_24.parquet", {"name":"./data/header_24.parquet","path":"./_file/data/header_24.31dc3980.parquet","lastModified":1713241561488});
+registerFile("./test.csv", {"name":"./test.csv","mimeType":"text/csv","path":"./_file/test.4275ed4a.csv","lastModified":1713149816953});
+registerFile("./test_db.db", {"name":"./test_db.db","path":"./_file/test_db.763836b4.db","lastModified":1712894450511});
+
+define({id: "a8595d25", inputs: ["FileAttachment"], outputs: ["SQLiteDatabaseClient","DuckDBClient","L","fec","db"], body: async (FileAttachment) => {
+const [{SQLiteDatabaseClient}, {DuckDBClient}, L] = await Promise.all([import("./_observablehq/stdlib/sqlite.js"), import("./_observablehq/stdlib/duckdb.js"), import("./_npm/leaflet@1.9.4/_esm.js")]);
+const fec = FileAttachment("./test_db.db").sqlite();
+const db = await DuckDBClient.of({
+	contributions24: FileAttachment("./data/SA_24.parquet"),
+	contributions23: FileAttachment("./data/SA_23.parquet"),
+	header: FileAttachment("./data/header_24.parquet"),
+	SB: FileAttachment("./data/SB_24.parquet"),
+	F3N24: FileAttachment("./data/F3N_24.parquet"),
+	F3N23: FileAttachment("./data/F3N_23.parquet"),
+	candidates: FileAttachment("./test.csv")
+});
+return {SQLiteDatabaseClient,DuckDBClient,L,fec,db};
+}});
+
+define({id: "01ba4719", body: () => {
+
+}});
+
+define({id: "6e3136d3", inputs: ["db"], outputs: ["summary"], body: (db) => {
+const summary = db.query("select distinct district from  candidates")
+
+return {summary};
+}});
+
+define({id: "ff4d7581", body: () => {
+//display(Inputs.table(db.sql`select * from f3n`))
+//const f3n_sum = db.sql`select committee_name,election_district,filer_committee_id_number,col_a_total_contributions_no_loans,col_b_total_contributions_no_loans from F3N where election_district = ${district_selected.district} `
+}});
+
+define({id: "f16f1ccf", inputs: ["db"], outputs: ["yearPeriods"], body: async (db) => {
+await db.sql`create table F3N as select *, (year(try_cast(coverage_from_date	 as date))||' '||report_code) as rpt_yr from F3N24 union select *, (year(try_cast(coverage_from_date	 as date))||' '||report_code) as rpt_yr from F3N23`;
+//await  db.sql`create table contributions_total as select * from contributions24 union select * from contributions23`;
+await db.sql`CREATE TABLE contribstotal AS
+SELECT 
+    (year(try_cast(coverage_from_date	 as date))||' '||report_code) as rpt_yr,
+    YEAR(TRY_CAST(f3.coverage_from_date AS DATE)) AS year,
+    f3.report_code, 
+    f3.election_district,
+    contribs.*
+FROM 
+    contributions24 contribs 
+LEFT JOIN 
+    f3n f3 ON contribs.filing_id = f3.filing_id
+UNION
+SELECT 
+    (year(try_cast(coverage_from_date	 as date))||' '||report_code) as rpt_yr,
+    YEAR(TRY_CAST(f3.coverage_from_date AS DATE)) AS year,
+    f3.report_code, 
+    f3.election_district,
+    contribs.*
+FROM 
+    contributions23 contribs 
+LEFT JOIN 
+    f3n f3 ON contribs.filing_id = f3.filing_id;
+`
+const yearPeriods = await db.sql`select distinct (year(try_cast(coverage_from_date	 as date))||' '||report_code) as rpt_yr,cast(year(try_cast(coverage_from_date	 as date)) as varchar) as year,	report_code  as report_type from F3N order by 1`
+return {yearPeriods};
+}});
+
+define({id: "bd9b1986", inputs: ["view","Inputs","summary"], outputs: ["district_selected"], body: (view,Inputs,summary) => {
+const district_selected = view(Inputs.select(summary, {format: (d) => d.district}));
+
+return {district_selected};
+}});
+
+define({id: "eb95b9ce", inputs: ["yearPeriods","view","Inputs"], outputs: ["combined_year_obj","period_object","period_selected"], body: (yearPeriods,view,Inputs) => {
+const combined_year_obj = [{report_type:"All",year:"",rpt_yr:false}]
+const period_object = combined_year_obj.concat([...yearPeriods].map(d=> ({report_type: d.report_type + ' ' + d.year , rpt_yr:d.rpt_yr})))
+const period_selected = view(Inputs.select(period_object,{format: (d) => d.report_type }))
+
+return {combined_year_obj,period_object,period_selected};
+}});
+
+define({id: "4576af20", inline: true, inputs: ["period_selected","display"], body: async (period_selected,display) => {
+display(await(
+period_selected.rpt_yr !== false ? period_selected.report_type : 'ALL'
+))
+}});
+
+define({id: "51d0964a", inline: true, inputs: ["district_selected","display"], body: async (district_selected,display) => {
+display(await(
+district_selected.district
+))
+}});
+
+define({id: "8074d48f", inputs: ["period_selected","db","district_selected"], outputs: ["race_raised_totals"], body: (period_selected,db,district_selected) => {
+const race_raised_totals = (() => 
+{
+if (period_selected.rpt_yr!== false)
+return db.sql`select committee_name, sum(col_a_total_contributions_no_loans) as col_a_total_contributions_no_loans from f3n where election_district = ${district_selected.district} and rpt_yr in (${period_selected.rpt_yr}) group by 1`
+else 
+return db.sql`select committee_name, sum(col_a_total_contributions_no_loans) as col_a_total_contributions_no_loans from f3n where election_district = ${district_selected.district} and rpt_yr in (select distinct rpt_yr from f3n) group by 1`
+}
+)()
+return {race_raised_totals};
+}});
+
+define({id: "f21d5eea", inputs: ["display","Plot","d3","race_raised_totals"], body: async (display,Plot,d3,race_raised_totals) => {
+display(Plot.plot({
+marginLeft: 150,
+ marginBottom: 150,
+  x: {
+    tickRotate: -30,
+  },
+grid:true,
+y: { label: "Dollars raised (no loans)", tickFormat: d3.format("$~s")},
+marks:[	Plot.barY( await race_raised_totals, {x:"committee_name",y:"col_a_total_contributions_no_loans"}),
+	]	}))
+}});
+
+define({id: "769170d6", inputs: ["period_selected","db","district_selected"], outputs: ["subset_contribs","locations"], body: (period_selected,db,district_selected) => {
+const subset_contribs = (() =>
+{
+
+if (period_selected.rpt_yr !== false)
+return   db.sql`WITH TopOccupations AS (
+    SELECT upper(contribs.contributor_occupation) AS contributor_occupation,
+    SUM(contribs.contribution_amount) AS amt
+    FROM contribstotal contribs
+    LEFT JOIN candidates
+    ON contribs.filer_committee_id_number = candidates.committee_id
+    WHERE candidates.district = ${district_selected.district} and memo_code = ''
+	and rpt_yr in (${period_selected.rpt_yr})
+    GROUP BY upper(contribs.contributor_occupation)
+    ORDER BY amt DESC
+    LIMIT 15
+) SELECT TopOccupations.contributor_occupation as contributor_occupation,
+candidates.party_x as party_x,
+SUM(contribs.contribution_amount) AS amt
+FROM contribstotal contribs
+LEFT JOIN candidates
+ON contribs.filer_committee_id_number = candidates.committee_id
+JOIN TopOccupations
+ON upper(contribs.contributor_occupation) = TopOccupations.contributor_occupation
+WHERE candidates.district = ${district_selected.district}
+and rpt_yr in (${period_selected.rpt_yr})
+AND memo_code = ''
+GROUP BY TopOccupations.contributor_occupation, candidates.party_x order by party_x;
+`
+else
+return  db.sql`WITH TopOccupations AS (
+    SELECT upper(contribs.contributor_occupation) AS contributor_occupation,
+    SUM(contribs.contribution_amount) AS amt
+    FROM contribstotal contribs
+    LEFT JOIN candidates
+    ON contribs.filer_committee_id_number = candidates.committee_id
+    WHERE candidates.district = ${district_selected.district} and memo_code = ''
+	and rpt_yr in (select distinct rpt_yr from f3n)
+    GROUP BY upper(contribs.contributor_occupation)
+    ORDER BY amt DESC
+    LIMIT 15
+) SELECT TopOccupations.contributor_occupation as contributor_occupation,
+candidates.party_x as party_x,
+SUM(contribs.contribution_amount) AS amt
+FROM contribstotal contribs
+LEFT JOIN candidates
+ON contribs.filer_committee_id_number = candidates.committee_id
+JOIN TopOccupations
+ON upper(contribs.contributor_occupation) = TopOccupations.contributor_occupation
+WHERE candidates.district = ${district_selected.district}
+and rpt_yr in (select distinct rpt_yr from f3n)
+AND memo_code = ''
+GROUP BY TopOccupations.contributor_occupation, candidates.party_x order by party_x;
+`
+})()
+
+
+const locations = (() => {
+if (period_selected.rpt_yr != false)
+return db.sql`
+select upper((contributor_first_name||' '||contributor_last_name)) as name,
+latitude,
+longitude,
+sum(contribution_amount) as amt,
+max(name_x) as candidate,
+from contribstotal contribs
+LEFT JOIN candidates
+ON contribs.filer_committee_id_number = candidates.committee_id
+where candidates.district = ${district_selected.district} and latitude is not null and longitude is not null and entity_type='IND'
+and rpt_yr in (${period_selected.rpt_yr})
+group by 1,2,3;`
+
+else
+return db.sql`
+select upper((contributor_first_name||' '||contributor_last_name)) as name,
+latitude,
+longitude,
+sum(contribution_amount) as amt,
+max(name_x) as candidate,
+from contribstotal contribs
+LEFT JOIN candidates
+ON contribs.filer_committee_id_number = candidates.committee_id
+where candidates.district = ${district_selected.district} and latitude is not null and longitude is not null and entity_type='IND'
+and rpt_yr in (select distinct rpt_yr from f3n)
+group by 1,2,3;`
+
+})();
+return {subset_contribs,locations};
+}});
+
+define({id: "51d0964a-1", inline: true, inputs: ["district_selected","display"], body: async (district_selected,display) => {
+display(await(
+district_selected.district
+))
+}});
+
+define({id: "b3624785", inputs: ["Plot","d3","subset_contribs","display"], body: async (Plot,d3,subset_contribs,display) => {
+display(await(
+    Plot.plot({
+
+  color: {
+  label: 'test',
+  legend: true,
+   type: "categorical",
+  domain: ["DEM","OTH","REP"],
+  range: ['blue','orange','red']
+  },
+  x: { label: "$ amount contributed", tickFormat: d3.format("($~s")},
+  marginLeft:  150,
+  marginRight:25,
+  facet: { data: subset_contribs, marginRight: 90 }, // ← gives facet labels 
+	marks: [
+    //Plot.text(subset_contribs, {x: "amt", y: "contributor_occupation", text: (d) => (d.freq).toFixed(0),, lineAnchor: "bottom"}),
+	Plot.barX(subset_contribs, {x: "amt", y: "contributor_occupation", sort: {y: "x", reverse: true},fill:'party_x', channels:{party:"party_x",amount:"amt",occupation:"contributor_occupation"},
+	tip:{
+		format: {
+		x:false,
+		y:false,
+		amount:(d)=> '$'+d3.format(',')(d),
+		party:true,
+		occupation:true,
+		fill:false
+		}
+		}
+	}
+),
+	
+	Plot.frame()
+	]
+	})
+))
+}});
+
+define({id: "51d0964a-2", inline: true, inputs: ["district_selected","display"], body: async (district_selected,display) => {
+display(await(
+district_selected.district
+))
+}});
+
+define({id: "79a13bc8", inputs: ["aq","locations","display","L","colorfn","d3"], outputs: ["candidate_list","div","map","legend"], body: (aq,locations,display,L,colorfn,d3) => {
+const candidate_list = aq.fromArrow(locations).select('candidate').dedupe().orderby('candidate').array('candidate');
+
+const div = display(document.createElement("div"));
+div.style = "height: 400px;";
+
+const map = L.map(div)
+  .setView([40.0902, -95.7129], 4);
+
+L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png", {
+  attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+})
+  .addTo(map);
+const legend = L.control({position: 'bottomleft'});
+legend.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'info legend custom-legend'),
+        labels = [];
+
+    // Loop through the unique candidates and generate a label with a colored square for each
+    candidate_list.forEach(function(candidate, index) {
+        const color = colorfn(candidate); // Use your d3 color scale
+        labels.push(
+            '<i style="background:' + color + '"></i> ' +
+            candidate
+        );
+    });
+
+    div.innerHTML = labels.join('<br>');
+    return div;
+};
+
+// Add the legend to the map
+legend.addTo(map);
+
+[...locations].forEach(location => {
+    L.circle([location.latitude, location.longitude], {'color': colorfn(location.candidate),radius:1})
+        .bindPopup(`Name: ${location.name} <br> Amount: $${d3.format(",")(location.amt)} <br> Candidate: ${location.candidate}
+			`) // Bind the popup with the location's info
+        .addTo(map);
+});
+
+//L.marker([51.5, -0.09])
+//  .addTo(map)
+//  .bindPopup("A nice popup<br> indicating a point of interest.")
+//  .openPopup();
+return {candidate_list,div,map,legend};
+}});
+
+define({id: "9db9faf9", inputs: ["d3"], outputs: ["colorfn"], body: (d3) => {
+const colorfn = d3.scaleOrdinal(d3.schemeCategory10);
+return {colorfn};
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link observablehq-link-active"><a href="./">FEC Browser</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link"><a href="./test">Untitled</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<style>
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--sans-serif);
+  margin: 4rem 0 8rem;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 2rem 0;
+  max-width: none;
+  font-size: 14vw;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero h2 {
+  margin: 0;
+  max-width: 34em;
+  font-size: 20px;
+  font-style: initial;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--theme-foreground-muted);
+}
+
+@media (min-width: 640px) {
+  .hero h1 {
+    font-size: 90px;
+  }
+}
+.custom-legend {
+    background-color: #f9f9f9; /* Change this to your desired background color */
+    color: black;
+}
+.legend span {
+  position: relative;
+  bottom: 3px;
+}
+
+.legend i {
+  width: 20px;
+  height: 18px;
+  float: left;
+  margin: 0 8px 0 0;
+  opacity: 0.7;
+}
+
+</style>
+<div id="cell-a8595d25" class="observablehq observablehq--block"></div>
+<div id="cell-01ba4719" class="observablehq observablehq--block"></div>
+<div id="cell-6e3136d3" class="observablehq observablehq--block"></div>
+<div id="cell-ff4d7581" class="observablehq observablehq--block"></div>
+<div id="cell-f16f1ccf" class="observablehq observablehq--block"></div>
+<div class="grid grid-cols-2">
+<div class="card">
+<h1 id="contributions-summary-for-house-races" tabindex="-1"><a class="observablehq-header-anchor" href="#contributions-summary-for-house-races">Contributions summary for House Races</a></h1>
+<div id="cell-bd9b1986" class="observablehq observablehq--block"></div>
+<div id="cell-eb95b9ce" class="observablehq observablehq--block"></div>
+<h1 id="individual-contributors-overview" tabindex="-1"><a class="observablehq-header-anchor" href="#individual-contributors-overview">Individual Contributors overview</a></h1>
+<p>The summaries below contain information about reported itemized disbursements on FEC Form 3 by authorized campaign committees for the reporting period and district you selected. The period you currently have selected is <span id="cell-4576af20" class="observablehq--loading"></span> and the district you have selected is SC <span id="cell-51d0964a" class="observablehq--loading"></span>.</p>
+<div id="cell-8074d48f" class="observablehq observablehq--block"></div>
+</div>
+<div class="card">
+<div id="cell-f21d5eea" class="observablehq observablehq--block observablehq--loading"></div>
+</div>
+</div>
+<div id="cell-769170d6" class="observablehq observablehq--block"></div>
+<div class="grid grid-cols-2">
+<div class="card">
+<h2>2024 US House contributions by occupation for district SC-<span id="cell-51d0964a-1" class="observablehq--loading"></span> in 2023</h2><h2>
+<div id="cell-b3624785" class="observablehq observablehq--block observablehq--loading"></div>
+</h2></div>
+<div class="card">
+<h2>Map of contributions reported in 2023 for 2024 US House races in SC-<span id="cell-51d0964a-2" class="observablehq--loading"></span></h2>
+<div id="cell-79a13bc8" class="observablehq observablehq--block"></div>
+</div>
+</div>
+<div id="cell-9db9faf9" class="observablehq observablehq--block"></div>
+
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="next" href="./test"><span>Untitled</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-04-19T23:11:46">Apr 19, 2024</a>.</div>
+</footer>
+</div>

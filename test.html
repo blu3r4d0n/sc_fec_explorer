@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>FEC Browser</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.css">
+<link rel="modulepreload" href="./_observablehq/client.js">
+<link rel="modulepreload" href="./_observablehq/runtime.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
+<link rel="modulepreload" href="./_npm/apache-arrow@15.0.2/_esm.js">
+<link rel="modulepreload" href="./_npm/parquet-wasm@0.5.0/esm/arrow1.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/duckdb.js">
+<link rel="modulepreload" href="./_npm/@duckdb/duckdb-wasm@1.28.0/_esm.js">
+<link rel="modulepreload" href="./_npm/tslib@2.6.2/_esm.js">
+<link rel="modulepreload" href="./_npm/flatbuffers@23.5.26/_esm.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.js";
+import {registerFile} from "./_observablehq/stdlib.js";
+
+registerFile("./data/F3N_23.parquet", {"name":"./data/F3N_23.parquet","path":"./_file/data/F3N_23.36535c8b.parquet","lastModified":1713266433256});
+registerFile("./data/F3N_24.parquet", {"name":"./data/F3N_24.parquet","path":"./_file/data/F3N_24.b6b6dafe.parquet","lastModified":1713241561498});
+registerFile("./data/SA_23.parquet", {"name":"./data/SA_23.parquet","path":"./_file/data/SA_23.8aa0874d.parquet","lastModified":1713266364101});
+registerFile("./data/SA_24.parquet", {"name":"./data/SA_24.parquet","path":"./_file/data/SA_24.44c221e6.parquet","lastModified":1713241561525});
+registerFile("./data/SB_24.parquet", {"name":"./data/SB_24.parquet","path":"./_file/data/SB_24.f3656357.parquet","lastModified":1713241561537});
+registerFile("./data/header_24.parquet", {"name":"./data/header_24.parquet","path":"./_file/data/header_24.31dc3980.parquet","lastModified":1713241561488});
+registerFile("./test.csv", {"name":"./test.csv","mimeType":"text/csv","path":"./_file/test.4275ed4a.csv","lastModified":1713149816953});
+
+define({id: "4ca10249", inputs: ["DuckDBClient","FileAttachment"], outputs: ["db"], body: async (DuckDBClient,FileAttachment) => {
+const db = await DuckDBClient.of({
+	contributions24: FileAttachment("./data/SA_24.parquet"),
+	contributions23: FileAttachment("./data/SA_23.parquet"),
+	header: FileAttachment("./data/header_24.parquet"),
+	SB: FileAttachment("./data/SB_24.parquet"),
+	F3N24: FileAttachment("./data/F3N_24.parquet"),
+	F3N23: FileAttachment("./data/F3N_23.parquet"),
+	candidates: FileAttachment("./test.csv")
+});
+console.log(db)
+return {db};
+}});
+
+</script>
+<input id="observablehq-sidebar-toggle" type="checkbox" title="Toggle sidebar">
+<label id="observablehq-sidebar-backdrop" for="observablehq-sidebar-toggle"></label>
+<nav id="observablehq-sidebar">
+  <ol>
+    <label id="observablehq-sidebar-close" for="observablehq-sidebar-toggle"></label>
+    <li class="observablehq-link"><a href="./">FEC Browser</a></li>
+  </ol>
+  <ol>
+    <li class="observablehq-link observablehq-link-active"><a href="./test">Untitled</a></li>
+  </ol>
+</nav>
+<script>{Object.assign(document.createElement("a"),{href:""}).password&&location.replace(location.href);const e=document.querySelector("#observablehq-sidebar"),o=document.querySelector("#observablehq-sidebar-toggle"),r=sessionStorage.getItem("observablehq-sidebar");r?o.checked=r==="true":o.indeterminate=!0;for(const t of document.querySelectorAll("#observablehq-sidebar summary")){const s=t.parentElement;switch(sessionStorage.getItem(`observablehq-sidebar:${t.textContent}`)){case"true":s.open=!0;break;case"false":s.classList.contains("observablehq-section-active")||(s.open=!1);break}}addEventListener("beforeunload",()=>sessionStorage.setItem("observablehq-sidebar-scrolly",`${e.scrollTop}`));const a=sessionStorage.getItem("observablehq-sidebar-scrolly");a!=null&&(e.style.cssText="overflow: hidden;",e.scrollTop=+a,e.style.cssText="");}</script>
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type), h2:first-child, :not(h1) + h2">
+<nav>
+</nav>
+</aside>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div id="cell-4ca10249" class="observablehq observablehq--block"></div>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./"><span>FEC Browser</span></a></nav>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-04-19T23:11:46">Apr 19, 2024</a>.</div>
+</footer>
+</div>
